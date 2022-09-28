@@ -1,0 +1,14 @@
+# This file is part of the YesWiki Extension fontautoinstall.
+# Authors : see README.md file that was distributed with this source code.
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+services:
+  _defaults:
+    autowire: true
+    public: true
+
+  YesWiki\Fontautoinstall\Service\:
+    resource: 'services/*'
+
+  YesWiki\Fontautoinstall\Service\ThemeManager:
+    decorates: YesWiki\Core\Service\ThemeManager
